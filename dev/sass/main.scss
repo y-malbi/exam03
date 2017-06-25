@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i');
+
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+@import "helpers/variables";
+@import "helpers/mixins";
+
+@import "layout/header";
+
+@font-face {
+	font-family: 'Conv_Proxima Nova Bold';
+	src: url('../fonts/Proxima Nova Bold.eot');
+	src: local('☺'), url('../fonts/Proxima Nova Bold.woff') format('woff'), url('fonts/Proxima Nova Bold.ttf') format('truetype'), url('fonts/Proxima Nova Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_Proxima Nova Semibold';
+	src: url('../fonts/Proxima Nova Semibold.eot');
+	src: local('☺'), url('../fonts/Proxima Nova Semibold.woff') format('woff'), url('fonts/Proxima Nova Semibold.ttf') format('truetype'), url('fonts/Proxima Nova Semibold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body{
+    background: $light;
+    color: $font-color;
+    font-size: 14px;
+    font-family: $main-font;
+    font-weight: 400;
+    line-height: 1.2;
+
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: $header-font;
+	font-weight: 700;
+	line-height: 1;
+	text-transform: uppercase;
+	margin:0;
+}
+h3{
+	color: $font-color;
+}
+a{
+	text-decoration: none;
+	color: $font-color;
+	transition: color 0.5s ease;
+
+	&:hover{
+		color: $theme-color;
+	}
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.container {
+	@include large {
+	    width: 1200px;
+	}
+}
+
+.section-name{
+	color: #fff;
+	font-size: 36px;
+	text-align: center;
+	@include small {
+		font-size: 26px;
+	}
+}
+.btn{
+	font-size: 20px;
+	font-style: italic;
+	border: 1px solid $font-color;
+	border-radius: 0;
+	padding: 10px 50px;
+	&:hover{
+		color: $theme-color;
+		background: #fff;
+		border-color: $theme-color;
+	}
+}
+
+.home{
+	background: $theme-color url(../images/top-bg.jpg) no-repeat center center;
+	background-size: cover;
+	min-height: 100vh;
+	margin-bottom: 125px;
+	@include small {
+		margin-bottom: 80px;
+	}
+	@include extra-small {
+		margin-bottom: 50px;
+	}
+	.home-text{
+		position: absolute;
+	    top: 50%;
+	    left: 0;
+	    transform: translateY(-50%);
+	    color: #fff;
+	}
+	.big-title{
+		font-family: $big-title-font;
+		font-size: 72px;
+		margin-bottom: 17px;
+		@include small {
+			font-size: 55px;
+		}
+		@include extra-small {
+			font-size: 41px;
+		}
+		@include mili {
+			font-size: 32px;
+		}
+	}
+	.title-desc{
+		font-size: 30px;
+		font-style: italic;
+		width: 60%;
+		margin: auto;
+		@include small {
+			font-size: 26px;
+		}
+		@include extra-small {
+			font-size: 18px;
+		}
+		@include mili {
+			font-size: 16px;
+		}
+	}
+}
+#about{
+	position: relative;
+	font-size: 20px;
+	img{
+		@include extra-small {
+			display: none;
+		}
+	}
+	.section-title{
+		position: absolute;
+		top: 10%;
+		left: 10%;
+		width: 80%;
+		text-align: center;
+		@include large {
+			width: 60%;
+			top: 13%;
+    		left: 11%;
+		}
+		@include extra-small {
+			position: static;
+			margin: auto;
+			padding: 7px 0;
+			background: rgba(0, 0, 0, 0.4);
+		}
+		@include mili {
+			background: transparent;
+		}
+		img{
+			display: inline-block;
+			margin-bottom: 20px;
+			@include large {
+				margin-bottom: 42px;
+			}
+			@include mili {
+				display: none;
+			}
+		}		
+
+		.section-name{
+			@include extra-small {
+				font-size: 22px;
+			}
+			@include mili {
+				color: $font-color;
+			}
+		}
+	}
+	.about-text{
+		padding-top: 73px;
+		@include small {
+			padding-top: 20px;
+			font-size: 16px;
+		}
+		@include mili {
+			padding-top: 0;
+			text-align: center;
+		}
+		p{
+			margin-bottom: 21px;
+		}
+		p:last-of-type{
+			margin-bottom: 94px;
+			@include extra-small {
+				margin-bottom: 20px;
+			}
+		}
+	}
+	a{
+		@include extra-small {
+			font-size: 16px;
+		}
+		@include mili {
+			width: 100%;
+		}
+	}
+}
+
+.works{
+	background: $theme-color url(../images/works-bg.jpg) no-repeat center center;
+	background-size: cover;
+	.section-title{
+		padding-top: 40px;
+		text-align: center;
+		margin-bottom: 62px;
+		@include large {
+			padding-top: 48px;
+		}
+		@include small {
+			margin-bottom: 30px;
+		}
+		img{
+			display: inline-block;
+			margin-bottom: 20px;
+			@include large {
+				margin-bottom: 33px;
+			}
+			@include mili {
+				display: none;
+			}
+		}
+	}
+	.section-name{
+		@include extra-small {
+			font-size: 22px;
+		}
+		@include mili {
+			color: $font-color;
+		}
+	}
+	.slick-slide{
+		img{
+			margin: 0 auto 40px auto;
+			@include small {
+			    width: 70%;
+			    margin-bottom: 20px;
+			}
+			@include mili {
+				width: 100%;
+				margin-bottom: 10px;
+			}
+		}
+	}
+	.slick-prev:before,
+	.slick-next:before{
+		font-size: 56px;
+		@include extra-small {
+			font-size: 0;
+		}
+	}
+	.slick-prev {
+		@include large {
+		    left: 25px;
+		}
+	}
+	.slick-next {
+	    right: 25px;
+	    @include large {
+		    right: 50px;
+		}
+	}
+	.slick-dots li button:before{
+		color: transparent;
+		border: 2px solid #fff;
+		border-radius: 50%;
+		width: 10px;
+	    height: 10px;
+	    opacity: 1;
+	}
+	.slick-dots li.slick-active button:before{
+		background: #fff;
+	}
+	.slick-dots li button{
+		height: 10px;
+		width: 10px;
+	}
+	.slick-dots li{
+		width: 7px;
+	}
+	.btn{
+		margin: 20px 0;
+		color: #fff;
+		border-color: #fff;
+		&:hover{
+			color: $theme-color;
+			background: #fff;
+			border-color: $theme-color;
+		}
+		@include small {
+			margin: 10px 0;
+		}
+		@include extra-small {
+			font-size: 16px;
+		}
+		@include mili {
+			width: 100%;
+		}
+	}
+}

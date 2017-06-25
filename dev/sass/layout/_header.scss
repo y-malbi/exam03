@@ -1,0 +1,60 @@
+header{
+	position: fixed;
+    width: 100%;
+    z-index: 5;
+    .logo{
+    	@include extra-small {
+			width: 60%;
+	    }
+	    @include mili {
+	    	display: none;
+	    }
+    }
+}
+.navbar {
+    margin-bottom: 0;
+
+    .navbar-toggle{
+    	.icon-bar{
+	    	background: #fff;
+	    }
+	    &:hover{
+	    	background: none;
+	    }
+    }
+    .navbar-collapse{
+    	border-color: $font-color;
+    	margin-top: 26px;
+
+    	@include extra-small {
+			background: rgba(0, 0, 0, 0.4);
+	    }
+    	
+    	.navbar-right{
+    		float: right;
+
+		    @include mili {
+				margin: 0; 
+		    }
+    	}
+    }
+
+	#main-menu{
+		margin-bottom: 20px;
+		li a{
+			color: #fff;
+			font-family: $header-font;
+			font-size: 24px;
+			text-transform: uppercase;
+			padding: 10px 13px;
+			&:hover,
+			&:active,
+			&:focus{
+				background: rgba(255,255,255,.4);
+			}
+			@include mili {
+				padding: 0 10px; 
+		    }
+		}
+	}
+}
